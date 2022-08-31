@@ -3,14 +3,18 @@ name: Releases
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - "v*"
 
 jobs:
   releases:
     name: release apk
 
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     env:
       JAVA_VERSION: "11.0"
       FLUTTER_VERSION: "2.0.0"
