@@ -1,4 +1,4 @@
-name: CI
+name: echo
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  echo-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,5 @@ jobs:
       - run: flutter --version
 
       - name: Run a one-line script
-        run: echo WHERE DOES THIS RUN!!!!!!
+        run: echo RUN!!!!!!
 
